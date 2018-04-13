@@ -1,0 +1,86 @@
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+
+RewriteRule ^noticias_ver/([0-9]+)\/(.*)\.html$ site/index.php?p=noticias_ver&id=$1
+RewriteRule ^noticias_ver/([0-9]+)/?$ site/index.php?p=noticias_ver&id=$1
+
+RewriteRule ^noticias/([0-9]+)\/(.*)\.html$ site/index.php?p=noticias&categoria=$1
+RewriteRule ^noticias/([0-9]+)/?$ site/index.php?p=noticias&categoria=$1
+
+RewriteRule ^departamentos_ver/([0-9]+)\/(.*)\.html$ site/index.php?p=departamentos_ver&id=$1
+RewriteRule ^departamentos_ver/([0-9]+)/?$ site/index.php?p=departamentos_ver&id=$1
+
+RewriteRule ^departamentos/([0-9]+)\/(.*)\.html$ site/index.php?p=departamentos&categoria=$1
+RewriteRule ^departamentos/([0-9]+)/?$ site/index.php?p=departamentos&categoria=$1
+
+RewriteRule ^galerias_ver/([0-9]+)\/(.*)\.html$ site/index.php?p=galerias_ver&id=$1
+RewriteRule ^galerias_ver/([0-9]+)/?$ site/index.php?p=galerias_ver&id=$1
+
+RewriteRule ^galerias site/index.php?p=galerias
+
+RewriteRule ^institucional/([0-9]+)\/(.*)\.html$ site/index.php?p=institucional&id=$1
+RewriteRule ^institucional/([0-9]+)/?$ site/index.php?p=institucional&id=$1
+
+RewriteRule ^videos_ver/([0-9]+)\/(.*)\.html$ site/index.php?p=videos_ver&id=$1
+RewriteRule ^videos_ver/([0-9]+)/?$ site/index.php?p=videos_ver&id=$1
+
+RewriteRule ^videos/([0-9]+)\/(.*)\.html$ site/index.php?p=videos&categoria=$1
+RewriteRule ^videos/([0-9]+)/?$ site/index.php?p=videos&categoria=$1
+
+RewriteRule ^downloads/([0-9]+)\/(.*)\.html$ site/index.php?p=downloads&categoria=$1
+RewriteRule ^downloads/([0-9]+)/?$ site/index.php?p=downloads&categoria=$1
+
+RewriteRule ^downloads_ver site/index.php?p=downloads_ver
+RewriteRule ^downloads_ver site/index.php?p=downloads_ver
+
+RewriteRule ^congregacao/([0-9]+)\/(.*)\.html$ site/index.php?p=congregacao&id=$1
+RewriteRule ^congregacao/([0-9]+)/?$ site/index.php?p=congregacao&id=$1
+
+RewriteRule ^congregacoes site/index.php?p=congregacoes
+
+RewriteRule ^loja_ver/([0-9]+)\/(.*)\.html$ site/index.php?p=loja_ver&id=$1
+RewriteRule ^loja_ver/([0-9]+)/?$ site/index.php?p=loja_ver&id=$1
+
+RewriteRule ^mural site/index.php?p=mural
+RewriteRule ^loja site/index.php?p=loja
+RewriteRule ^login site/index.php?p=membros
+RewriteRule ^login2 site/index.php?p=login2
+RewriteRule ^login3 site/index.php?p=login3
+RewriteRule ^membros site/index.php?p=membros
+RewriteRule ^editar site/index.php?p=editar
+RewriteRule ^galerias site/index.php?p=galerias
+RewriteRule ^faleconosco site/index.php?p=contato
+RewriteRule ^contato site/index.php?p=contato
+RewriteRule ^agenda site/index.php?p=agenda
+RewriteRule ^agenda_ver site/index.php?p=agenda_ver
+RewriteRule ^lideranca site/index.php?p=lideranca
+RewriteRule ^pedidosdeoracao site/index.php?p=pedidosdeoracao
+
+RewriteRule ^departamentos/([0-9]+)\/(.*)\.html/pg/([0-9]+)/?$ site/index.php?p=departamentos&categoria=$1&pagina=$2&pg=$3
+RewriteRule ^departamentos/([0-9]+)/pg/([0-9]+)/?$ site/index.php?p=departamentos&categoria=$1&pg=$2
+
+RewriteRule ^videos/([0-9]+)\/(.*)\.html/pg/([0-9]+)/?$ site/index.php?p=videos&categoria=$1&pagina=$2&pg=$3
+RewriteRule ^videos/([0-9]+)/pg/([0-9]+)/?$ site/index.php?p=videos&categoria=$1&pg=$2
+RewriteRule ^agenda/pg/([0-9]+)/?$ site/index.php?p=agenda&pg=$1
+
+RewriteRule ^noticias/([0-9]+)\/(.*)\.html/pg/([0-9]+)/?$ site/index.php?p=noticias&categoria=$1&pagina=$2&pg=$3
+RewriteRule ^noticias/([0-9]+)/pg/([0-9]+)/?$ site/index.php?p=noticias&categoria=$1&pg=$2
+
+RewriteRule ^galeria/pg/([0-9]+)/?$ site/index.php?p=galeria&pg=$1
+RewriteRule ^mural/pg/([0-9]+)/?$ site/index.php?p=mural&pg=$1
+RewriteRule ^loja/pg/([0-9]+)/?$ site/index.php?p=loja&pg=$1
+
+
+
+
+
+
+
+
+
+
+
+RewriteRule ^/?$ site/index.php
