@@ -1,5 +1,6 @@
  <?php
-if ($dados_header == 1) {
+ $page = $this->M_header->pegar_config();
+ 
     foreach ($page->result() as $row) {
         ?>
 <!DOCTYPE html>
@@ -48,7 +49,7 @@ if ($dados_header == 1) {
 		<div class="logo_container mr-auto">
 			<div class="logo">
                            
-				<a href="#"><img src='<?php echo base_url();?>/arquivos/configuracoes/<?= $row->imagem ?> '></a>
+				<a href="<?= $row->url ?>"><img src='<?php echo base_url();?>arquivos/configuracoes/<?= $row->imagem ?> '></a>
 			
                         </div>
 		</div>
@@ -56,7 +57,7 @@ if ($dados_header == 1) {
 		<!-- Main Navigation -->
 		<nav class="main_nav justify-self-end">
 			<ul class="nav_items">
-				<li class="active"><a href="#"><span>home</span></a></li>
+				<li class="active"><a href="<?= $row->url ?>"><span>home</span></a></li>
 				<li class="nav-item dropdown"> 
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span>Igreja</span></a>
                                 <div class="dropdown-menu">
@@ -69,7 +70,7 @@ if ($dados_header == 1) {
                                 </li>
 				<li><a href="elements.html"><span>elements</span></a></li>
 				<li><a href="blog.html"><span>blog</span></a></li>
-				<li><a href="contact.html"><span>contact</span></a></li>
+				<li><a href="<?php echo base_url('contato');?>"><span>contact</span></a></li>
 			</ul>
 		</nav>
         
@@ -96,19 +97,20 @@ if ($dados_header == 1) {
 				<li><a href="#"><span><span>C</span>Contact</span></a></li>
 			</ul>
 		</nav>
-		<div class="fs_social_container d-flex flex-row justify-content-end align-items-center">
-			<ul class="fs_social">
-				<li><a href="<?= $row->facebook ?>"><i class="fab fa-facebook-f trans_300"></i></a></li>
-				<li><a href="<?= $row->twitter ?>"><i class="fab fa-twitter trans_300"></i></a></li>
-				<li><a href="<?= $row->youtube ?>"><i class="fab fa-youtube trans_300"></i></a></li>
-				
-			</ul>
-		</div>
+		
 	</div>
                     <!-- conteudo geral -->
-    
+    <div class="home_social_container d-flex flex-row justify-content-end align-items-center">
+		<ul class="home_social">
+			
+			<li><a href="<?= $row->facebook ?>"><i class="fab fa-facebook-f trans_300"></i></a></li>
+			<li><a href="<?= $row->twitter ?>"><i class="fab fa-twitter trans_300"></i></a></li>
+			<li><a href="<?= $row->youtube ?>"><i class="fab fa-youtube trans_300"></i></a></li>
+			
+		</ul>
+	</div>
                     <!-- conteudo -->
-                        <div >
+                        <div>
                             <?php echo $contents ?>
                         </div>
                     
@@ -143,9 +145,6 @@ if ($dados_header == 1) {
  </div><!-- super_container -->
    <?php
     }
-} else {
-    echo $dados_header;
-}
 ?> 
 
 <script src="<?php echo base_url(); ?>js/jquery-3.2.1.min.js"></script>

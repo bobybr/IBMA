@@ -10,7 +10,10 @@ class Contato extends CI_Controller {
 
     public function index() { //inicio chamada de novidades destaque
     
-            $dados['teste'] = 'teste';
+        
+            
+        $dados['teste'] = 'teste';
+            
         
         $this->template->set('title', 'HS Sistemas - a melhor opção!');
         $this->template->load('template', 'nav/contato', $dados);
