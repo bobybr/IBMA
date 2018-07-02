@@ -7,7 +7,11 @@
                 <h1 class="page-header">Fale
                     <small>Conosco</small>
                 </h1>
-                <br>
+                <ol class="breadcrumb">
+                    <li><a href="<?php echo base_url('home')?>">Home</a>
+                    </li>
+                    <li class="active">Contato</li>
+                </ol>
             </div>
         </div>
         <!-- /.row -->
@@ -183,7 +187,7 @@ echo "<script>window.location='$exibir_apos_enviar'</script>";
         </div>
         <!-- /.row -->
 
-        <br>
+        <hr>
 
 
 

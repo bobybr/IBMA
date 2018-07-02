@@ -28,17 +28,4 @@ class M_header extends CI_Model
             return  $this->db->get();
         }
         
-        function pegar_config()
-        {
-            $this->db->select('*');
-        $this->db->from('tbconfiguracoes');
-        $this->db->where('id_config', 1);
-        
-        
-        return  $this->db->get();
-        }
-        
-        
-        
 }
-
